@@ -3,9 +3,9 @@ For BDMP usage.
 # Test steps
 #### 1. launch
 
-    ``` shell
-    mvn clean spring-boot:run
-    ```
+``` shell
+mvn clean spring-boot:run
+```
 
 #### 2. browser 1: subscribe as job id 1
 open http://localhost:8080/ in browser, and input '1' then click connect button.
