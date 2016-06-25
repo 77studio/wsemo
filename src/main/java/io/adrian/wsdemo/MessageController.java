@@ -29,10 +29,4 @@ public class MessageController {
         template.convertAndSendToUser(id, "/message", greeting);
         return greeting;
     }
-
-    @MessageMapping("/message")
-    @SendToUser("/message")
-    public LongJobMessage userMessage(LongJobMessage message) throws Exception {
-        return message;
-    }
 }

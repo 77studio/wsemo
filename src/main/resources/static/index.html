@@ -23,7 +23,7 @@
 		stompClient.connect({}, function(frame) {
 			setConnected(true);
 			console.log('Connected: ' + frame);
-			stompClient.subscribe('/user/' + jobId + '/message', function(
+			stompClient.subscribe('/longjob/' + jobId + '/message', function(
 					greeting) {
 				showGreeting(JSON.parse(greeting.body).content);
 			});
