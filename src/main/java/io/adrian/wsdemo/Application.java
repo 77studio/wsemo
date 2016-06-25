@@ -1,4 +1,4 @@
-package hello;
+package io.adrian.wsdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

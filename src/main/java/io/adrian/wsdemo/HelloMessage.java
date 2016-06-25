@@ -1,4 +1,4 @@
-package hello;
+package io.adrian.wsdemo;
 
 public class HelloMessage {
 
