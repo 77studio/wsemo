@@ -1,0 +1,13 @@
+.classpath
+.project
+.settings
+bin/.settings
+.eclipse
+*/bin
+target
+.idea
+*.iml
+nb-configuration.xml
+.DS_Store
+logs/
+test.temp/
