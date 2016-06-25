@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class GreetingController {
+public class MessageController {
 
     @Autowired
     private SimpMessagingTemplate template;
@@ -23,8 +23,8 @@ public class GreetingController {
      */
     @RequestMapping("/testSend")
     @ResponseBody
-    public Greeting send(@RequestParam String msg, @RequestParam String id) {
-        Greeting greeting = new Greeting("Hello, " + msg + "!");
+    public LongJobMessage send(@RequestParam String msg, @RequestParam String id) {
+        LongJobMessage greeting = new LongJobMessage("Hello, " + msg + "!");
         // 推送消息，id：LongJob的ID     greeting：消息内容对象
         template.convertAndSendToUser(id, "/message", greeting);
         return greeting;
@@ -32,8 +32,7 @@ public class GreetingController {
 
     @MessageMapping("/message")
     @SendToUser("/message")
-    public Greeting userMessage(HelloMessage message) throws Exception {
-        System.err.println("Job: " + message.getName());
-        return new Greeting("Job: " + message.getName());
+    public LongJobMessage userMessage(LongJobMessage message) throws Exception {
+        return message;
     }
 }

@@ -1,10 +1,10 @@
 package io.adrian.wsdemo;
 
-public class Greeting {
+public class LongJobMessage {
 
     private String content;
 
-    public Greeting(String content) {
+    public LongJobMessage(String content) {
         this.content = content;
     }
 
